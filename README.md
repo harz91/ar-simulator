@@ -3,6 +3,7 @@
 A monorepo for AR Simulator with Studio, Trainer, and Server.
 
 ## Tech Stack
+
 - React + Vite + TypeScript (apps)
 - Node.js + Express + TypeScript (server)
 - Firebase: Auth + Firestore + Storage
@@ -12,11 +13,13 @@ A monorepo for AR Simulator with Studio, Trainer, and Server.
 ## Setup
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Build shared package:
+
    ```bash
    npm run build --workspace=ar-simulator-shared
    ```
@@ -26,6 +29,7 @@ A monorepo for AR Simulator with Studio, Trainer, and Server.
 4. Set up environment variables.
 
    For apps/studio/.env:
+
    ```
    VITE_FIREBASE_API_KEY=your_api_key
    VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
@@ -38,6 +42,7 @@ A monorepo for AR Simulator with Studio, Trainer, and Server.
    For apps/trainer/.env: same as studio.
 
    For server/.env:
+
    ```
    FIREBASE_PROJECT_ID=your_project_id
    FIREBASE_PRIVATE_KEY=your_private_key
@@ -54,6 +59,7 @@ A monorepo for AR Simulator with Studio, Trainer, and Server.
    ```
 
 ## Milestones Implemented
+
 - Milestone 1: Repo + Firebase plumbing ✅
 - Milestone 2: Firestore data model + project CRUD ✅
 - Milestone 3: Upload GLB + index nodes/parts (client-side) ✅
