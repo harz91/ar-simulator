@@ -1,0 +1,16 @@
+{
+  "name": "ar-simulator",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/studio",
+    "dev:trainer": "npm run dev -w apps/trainer",
+    "dev:server": "npm run dev -w server",
+    "build": "npm run build -w packages/shared && npm run build -w apps/studio && npm run build -w apps/trainer && npm run build -w server",
+    "typecheck": "npm run typecheck -w packages/shared && npm run typecheck -w apps/studio && npm run typecheck -w apps/trainer && npm run typecheck -w server"
+  }
+}

@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /projects/{projectId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.ownerUid;
+
+      match /nodes/{nodeId} {
+        allow read, write: if request.auth != null && request.auth.uid == get(/databases/$(database)/documents/projects/$(projectId)).data.ownerUid;
+      }
+
+      match /steps/{stepId} {
+        allow read, write: if request.auth != null && request.auth.uid == get(/databases/$(database)/documents/projects/$(projectId)).data.ownerUid;
+        match /displacements/{dispId} {
+          allow read, write: if request.auth != null && request.auth.uid == get(/databases/$(database)/documents/projects/$(projectId)).data.ownerUid;
+        }
+      }
+    }
+  }
+}

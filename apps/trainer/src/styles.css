@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+main {
+  padding: 16px;
+}
+
+.viewer {
+  height: 60vh;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.viewer model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.step-panel {
+  margin-top: 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #38bdf8;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #334155;
+  color: white;
+}
+
+.inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
