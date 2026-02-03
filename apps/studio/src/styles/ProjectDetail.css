@@ -1,0 +1,301 @@
+.project-detail-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.btn-back:hover {
+  color: #0056b3;
+}
+
+.project-header {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+.project-header h1 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 32px;
+}
+
+.project-info {
+  display: flex;
+  gap: 30px;
+  color: #666;
+  font-size: 14px;
+}
+
+.project-info p {
+  margin: 0;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.steps-section h2,
+.assets-section h2,
+.viewport-section h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.glb-upload-section {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.upload-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.file-input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.file-input:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.uploading-text {
+  display: inline-block;
+  color: #ff9800;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.success-text {
+  color: #4caf50;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.empty-message {
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.step-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.step-content p {
+  margin: 0 0 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.step-duration {
+  color: #999;
+  font-size: 12px;
+}
+
+.asset-info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.asset-info p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.asset-info p:last-child {
+  margin-bottom: 0;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+.step-editor {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-capture,
+.btn-create-step,
+.btn-preview {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-capture {
+  background-color: #ff9800;
+  color: white;
+  flex: 1;
+}
+
+.btn-capture:hover:not(:disabled) {
+  background-color: #f57c00;
+}
+
+.btn-create-step {
+  background-color: #4caf50;
+  color: white;
+  flex: 1;
+}
+
+.btn-create-step:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.btn-preview {
+  background-color: #2196f3;
+  color: white;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.btn-preview:hover:not(:disabled) {
+  background-color: #0b7dda;
+}
+
+.btn-capture:disabled,
+.btn-create-step:disabled,
+.btn-preview:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.step-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  align-items: center;
+}
+
+.step-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .step-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

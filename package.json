@@ -1,0 +1,25 @@
+{
+  "name": "ar-simulator",
+  "version": "1.0.0",
+  "description": "AR Simulator monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/studio",
+    "apps/trainer",
+    "server",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:studio": "npm run dev --workspace=apps/studio",
+    "dev:trainer": "npm run dev --workspace=apps/trainer",
+    "dev:server": "npm run dev --workspace=server",
+    "build": "npm run build --workspaces",
+    "build:studio": "npm run build --workspace=apps/studio",
+    "build:trainer": "npm run build --workspace=apps/trainer",
+    "build:server": "npm run build --workspace=server"
+  },
+  "devDependencies": {
+    "@types/three": "^0.182.0",
+    "typescript": "^5.3.3"
+  }
+}

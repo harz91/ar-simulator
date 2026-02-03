@@ -1,0 +1,174 @@
+.trainer-view {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.trainer-view.loading,
+.trainer-view.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.trainer-view.error {
+  background-color: #fee;
+}
+
+.trainer-view.error h2 {
+  color: #c33;
+  margin-bottom: 10px;
+}
+
+.trainer-view.error p {
+  color: #666;
+  font-size: 14px;
+}
+
+.trainer-container {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.model-viewer-container {
+  flex: 1;
+  min-width: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.model-viewer-container model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.model-viewer-container .no-model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  font-size: 16px;
+}
+
+.step-ui {
+  width: 350px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.step-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.step-counter {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.step-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.step-content .instruction {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.step-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #dee2e6;
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+@media (max-width: 1024px) {
+  .trainer-container {
+    flex-direction: column;
+  }
+
+  .step-ui {
+    width: 100%;
+  }
+
+  .model-viewer-container {
+    min-height: 400px;
+  }
+}
